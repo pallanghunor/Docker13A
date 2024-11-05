@@ -15,8 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run:
+      run: |
         docker build . --file Dockerfile --tag cr.jedlik.cloud/html-pallanghunor:0.2
-    - name: Push the Docker image
-      run:
         docker push cr.jedlik.cloud/html-pallanghunor:0.2
